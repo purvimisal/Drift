@@ -1,0 +1,17 @@
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="512" height="512" rx="114" fill="#5C8A6E"/>
+  <g transform="translate(106, 106) scale(1.167)">
+    <path d="M255 25C140 25 25 60 25 200C25 320 120 400 255 487C390 400 485 320 485 200C485 60 370 25 255 25Z" fill="none"/>
+  </g>
+  <!-- Leaf shape centered -->
+  <g transform="translate(256, 256)">
+    <!-- Main leaf -->
+    <path d="M0 -120 C60 -120 120 -60 120 0 C120 80 60 130 0 150 C-60 130 -120 80 -120 0 C-120 -60 -60 -120 0 -120Z" fill="white" opacity="0.95"/>
+    <!-- Stem -->
+    <line x1="0" y1="150" x2="0" y2="200" stroke="white" stroke-width="12" stroke-linecap="round" opacity="0.95"/>
+    <!-- Vein -->
+    <line x1="0" y1="-60" x2="0" y2="130" stroke="#5C8A6E" stroke-width="8" stroke-linecap="round" opacity="0.5"/>
+    <line x1="0" y1="20" x2="60" y2="-20" stroke="#5C8A6E" stroke-width="6" stroke-linecap="round" opacity="0.4"/>
+    <line x1="0" y1="60" x2="-55" y2="20" stroke="#5C8A6E" stroke-width="6" stroke-linecap="round" opacity="0.4"/>
+  </g>
+</svg>

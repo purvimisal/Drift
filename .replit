@@ -1,0 +1,36 @@
+modules = ["nodejs-24", "postgresql-16"]
+
+[[artifacts]]
+id = "artifacts/api-server"
+
+[[artifacts]]
+id = "artifacts/mockup-sandbox"
+
+[deployment]
+router = "application"
+deploymentTarget = "autoscale"
+
+[deployment.postBuild]
+args = ["pnpm", "store", "prune"]
+env = { "CI" = "true" }
+
+[workflows]
+runButton = "Project"
+
+[agent]
+stack = "PNPM_WORKSPACE"
+expertMode = true
+
+[postMerge]
+path = "scripts/post-merge.sh"
+timeoutMs = 20000
+
+[nix]
+channel = "stable-25_05"
+
+[userenv]
+
+[userenv.shared]
+VAPID_PUBLIC_KEY = "BAuf9x_dt6INPZnFEIT76Kn-SBn4_IVd22NEyGuIilycSNsoI3wNAZyCOcjztDH4AUnHCoeZPJAnzTIUCcNcR_4"
+VAPID_PRIVATE_KEY = "UBfutaVGoiiAJx_Zt3_0TNAZNfIWAYPqF7ppXsMciOw"
+VAPID_EMAIL = "mailto:drift@replit.app"

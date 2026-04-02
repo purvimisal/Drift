@@ -1,0 +1,104 @@
+PROMPT:
+
+Build a mobile-first web app called “Drift” — an adaptive motivation assistant that helps users return to their goals without guilt or pressure.
+
+Core philosophy:
+
+Users are allowed to pause, struggle, and make mistakes
+The system must never guilt-trip or shame the user
+The goal is to help users return, not stay perfect
+Tone should feel calm, understanding, and emotionally intelligent
+Core Features:
+Goal Setup
+User enters:
+Goal (text)
+Duration
+System generates simple daily tasks
+Daily Task Screen (Main UI)
+Show:
+Today’s task
+Actions:
+✅ Done
+⏭ Skip
+🪶 “Too much”
+
+Design:
+
+Minimal
+Clean
+No dashboards or overwhelming data
+State Machine (must implement)
+
+States:
+
+ON_TRACK → completed recently
+DRIFTING → missed 1 task
+DISENGAGING → missed 2 tasks or clicked “too much”
+AT_RISK → missed 3+ tasks or inactive 48h
+RETURNING → user comes back after disengagement
+Detection Logic
+
+Track:
+
+missed_count
+last_completed_date
+last_opened_timestamp
+too_much_flag
+Adaptive System
+
+Behavior:
+
+DRIFTING:
+No task change
+Message: “Missed today. Happens.”
+DISENGAGING:
+Reduce task difficulty by ~40%
+Message: “Let’s make it easier.”
+AT_RISK:
+Reduce to minimal effort task (2–5 minutes)
+Message: “No pressure. Just start small.”
+RETURNING:
+Increase difficulty slightly (10–20%)
+Message: “Good to have you back.”
+Task Scaling Logic
+Reduce difficulty when user struggles
+Increase gradually when consistent
+Minimum task = very small (2 minutes equivalent)
+Notifications (simulate if needed)
+
+Trigger-based:
+
+Missed tasks
+Inactivity (48h)
+Return moments
+
+Important:
+
+No spam
+No guilt language
+Messages should feel human, not robotic
+Tone & UX
+Calm, safe, non-judgmental
+Slightly witty but not childish
+Avoid:
+“You failed”
+“Don’t break your streak”
+Prefer:
+“You can always come back”
+“Let’s keep it light today”
+Tech Stack
+Frontend: React / Next.js
+Backend: Node.js or Firebase
+Store data simply (local or DB)
+Bonus (if possible)
+Use OpenAI API to:
+Generate initial task plan
+Generate dynamic supportive messages
+One critical note
+
+Your strongest differentiator is now clearly encoded:
+
+This is not a productivity app.
+It is a psychologically safe system for returning.
+
+That’s rare—and if you execute tone + timing correctly, it’s what will make people actually stay.

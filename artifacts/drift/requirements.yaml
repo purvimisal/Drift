@@ -1,0 +1,16 @@
+packages:
+  "framer-motion": "For gentle, calming page transitions and micro-interactions"
+  "@hookform/resolvers": "For robust form validation"
+  "react-hook-form": "For building the setup form smoothly"
+  "canvas-confetti": "For a subtle, rewarding celebration when a task is done"
+  "@types/canvas-confetti": "Types for canvas-confetti"
+
+images:
+  - path: "artifacts/drift/public/images/drift-bg.png"
+    description: "A very subtle, abstract, soft watercolor gradient background in pale sage, warm beige, and soft peach tones. Calming, minimalist, and serene. Lots of negative space."
+    aspect_ratio: "16:9"
+
+notes:
+  - "The app relies heavily on the 'TodayTaskResponse' to render the main view."
+  - "If 'useGetTodayTask' returns a 404, we interpret that as 'No tasks scheduled for today' or 'All caught up'."
+  - "Using generated hooks from @workspace/api-client-react."
